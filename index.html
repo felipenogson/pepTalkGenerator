@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📣</text></svg>">
+
+	<title>You Got it!</title>
+	<link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+	<div id="info-icon">
+		<a href="#information">
+			<img src="./iconmonstr-help-3-24.png" alt="">
+		</a>
+	</div>
+	<div class="main" x-data="{ quotes: {}, quote: '', show: false }" x-init="quotes = await( await fetch('./pepTalkData.json')).json(); 
+	quote = `${quotes.first[Math.floor(Math.random() * quotes.first.length)]} ${quotes.second[Math.floor(Math.random() * quotes.second.length)]} ${quotes.third[Math.floor(Math.random() * quotes.third.length)]} ${quotes.fourth[Math.floor(Math.random() * quotes.fourth.length)]}`; show=true ">
+		<hr>
+		<div id="quote">
+			<span x-text="quote" x-show="show" x-transition.duration.500ms
+			></span>
+		</div>
+		<hr>
+	</div>
+	<div id="information">
+		<h3>What is this?</h3>
+		<p>
+			I found this <a href="https://i.redd.it/w6yzerz484u71.png">infographic</a>, on <a href="https://www.reddit.com/r/coolguides/comments/qacund/handy_pep_talk_guide/"> r/coolguides</a>.
+			and I thought that it was really cool, so I made a random pep quote generator based on it. 
+		</p>
+		<p>
+			It cheers me up my day and may cheers yours up too.
+			<b>To get another quote just reload the page (●'◡'●)</b>
+		</p>
+		<h4>Information</h4>
+		<p>
+			Feel free to contact me for anything, I'm just a random guy who likes to code. Check me <a href="http://felipon.org">online</a>, check my <a href="https://github.com/felipenogson/">github</a>, or send me an <a href="mailto:felipe@nogson.com">email</a>.
+		</p>
+		<h5> Have an excelent day.</h5>
+		By the way this is the image <img src="https://i.redd.it/w6yzerz484u71.png" alt="pep talk generator infographic " style="width: 100%;"> 
+
+
+	</div>
+</body>
+</html>

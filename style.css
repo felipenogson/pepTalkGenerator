@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+	height: 100vh;
+	background-color: rgb(24, 24, 24);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+hr {
+	color: white;
+	width: 20rem;
+}
+#quote{
+	font-family: 'Changa One', cursive;
+    font-size: 3rem;
+	padding: 3rem;
+    background: linear-gradient(156deg, rgb(255 53 108) 0%, rgb(51 161 255) 86%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#quote span {
+	opacity: 0;
+	transition: opacity 1.5s ease-in-out;
+}
+
+#quote span.shown {
+	opacity: 1;
+}
+
+#information {
+	margin: 3rem;
+	font-family: 'Playfair Display', serif;
+	max-width: 80%
+}
+
+#info-icon{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
